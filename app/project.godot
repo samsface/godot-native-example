@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "",
+"class": "Example",
+"language": "NativeScript",
+"path": "res://addons/example/example.gdns"
+} ]
+_global_script_class_icons={
+"Example": ""
+}
+
+[application]
+
+config/name="GDNative Example"
+run/main_scene="res://Node2D.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Steam="*res://addons/steam_api/steam.tscn"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )

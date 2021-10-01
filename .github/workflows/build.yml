@@ -1,0 +1,42 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: ['ubuntu', 'windows', 'macos']
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: get python
+        uses: actions/setup-python@v2
+      - name: get conan
+        uses: turtlebrowser/get-conan@main
+      - name: cache conan
+        uses: actions/cache@v2
+        with:
+           path: ~/.conan
+           key: ${{ runner.os }}-conan-0
+      - name: build
+        run: ./ci/ci.bash
+        shell: bash
+      - name: upload-artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: gdnative-example-${{ matrix.os }}
+          path: work/install
+
+  remove-old-artifacts:
+    needs: [publish]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - name: remove-old-artifacts
+      uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '10 minutes'

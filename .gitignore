@@ -1,0 +1,4 @@
+work
+*.dylib
+*.so
+*.dll

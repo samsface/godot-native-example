@@ -1,0 +1,18 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true
+
+[entry]
+
+OSX.64="res://addons/example/libgdnative-example.dylib"
+Windows.64="res://addons/example/gdnative-example.dll"
+X11.64="res://addons/example/libgdnative-example.so"
+
+[dependencies]
+
+OSX.64=[  ]
+Windows.64=[  ]
+X11.64=[  ]
