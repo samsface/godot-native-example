@@ -24,10 +24,6 @@ config/name="GDNative Example"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Steam="*res://addons/steam_api/steam.tscn"
-
 [editor_plugins]
 
 enabled=PoolStringArray(  )
