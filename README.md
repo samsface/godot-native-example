@@ -20,7 +20,9 @@ In this project:
   debug.bat
   ```
  
-3. Open `godot-native-example.sln` and build. That's it. Run the godot project and it should print "ciao" to the output.
+3. Open `godot-native-example.sln` and build. 
+
+4. Run the godot project in the app directory of this repo. If it prints "ciao" to the output, it worked!
 
 
 ## For all builds
