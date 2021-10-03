@@ -27,5 +27,5 @@ In this project:
 
 ## For all builds
 
-- CMake will install the plugin into the example project directory every time you build so need to copy any files into the Godot project.
+- You DO NOT need to copy and built files into the Godot project. CMake does this for you.
 - You DO NOT need to restart Godot every time you rebuild. Godot will reload the plugin.
