@@ -40,7 +40,10 @@ class GodotCppConan(ConanFile):
 
         for line in scrub:
             tools.replace_in_file("CMakeLists.txt", line, "")
-
+            
+        tools.replace_in_file("CMakeLists.txt", "find_package(PythonInterp REQUIRED)", "find_package(Python3 COMPONENTS Interpreter REQUIRED)")
+        tools.replace_in_file("CMakeLists.txt", "PYTHON_EXECUTABLE", "Python3_EXECUTABLE")
+        
         with open("CMakeLists.txt", "a") as myfile:
             myfile.write("install(DIRECTORY godot-headers/ DESTINATION include)\n")
             myfile.write("install(DIRECTORY include/core DESTINATION include)\n")
