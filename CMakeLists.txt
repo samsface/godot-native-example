@@ -34,7 +34,6 @@ conan_cmake_autodetect(settings)
 conan_cmake_install(PATH_OR_REFERENCE . BUILD missing SETTINGS ${settings})
 
 find_package(godot-cpp)
-find_package(GIF)
 
 ###############################################################################
 
