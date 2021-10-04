@@ -50,13 +50,15 @@ class GodotCppConan(ConanFile):
             myfile.write("install(DIRECTORY include/core/ DESTINATION include)\n")
             myfile.write("install(DIRECTORY include/gen/ DESTINATION include)\n")
             myfile.write("install(TARGETS godot-cpp)\n")
- 
 
     def _configure_cmake(self):
         cmake = CMake(self)
 
         if self.settings.os == "Macos":
             cmake.definitions["CMAKE_OSX_ARCHITECTURES"] = "arm64;x86_64"
+
+        if self.settings.build_type == "Debug":
+            cmake.definitions["CMAKE_BUILD_TYPE"] = "Debug"
 
         cmake.configure()
         return cmake
