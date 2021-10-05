@@ -9,6 +9,7 @@ In this project:
 ## Buildling on Windows
 
 1. Download and install:
+    - https://git-scm.com/download/win
     - https://cmake.org/download
     - https://visualstudio.microsoft.com/downloads (community edition is fine)
     - https://www.python.org/downloads **(must use Python 3!)**
