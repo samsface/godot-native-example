@@ -31,4 +31,6 @@ In this project:
 
 ## Using the CI:
 
-This project contains a github actions file that will build your project for all supported platforms every time you push changes. To use it, just Fork this project and then just push changes. You'll see the build status in the Actions tab of your fork.
+This project contains a github actions file that will build your project for all supported platforms every time you push changes. To use it, just Fork this project and then just push changes. You'll see the build status in the Actions tab of your fork. 
+
+* Github actions free tier only gives you so many minutes of compute per month so be conciuous of this.
