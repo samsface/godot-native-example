@@ -14,9 +14,9 @@ In this project:
     - https://visualstudio.microsoft.com/downloads (community edition is fine)
     - https://www.python.org/downloads **(must use Python 3!)**
 
-2. Clone this repo and run debug.bat.
+2. Open a cmd.exe window and run the follow commands:
   ``` bat
-  git clone git@github.com:samsface/godot-native-example.git
+  git clone https://github.com/samsface/godot-native-example.git
   cd godot-native-example
   debug.bat
   ```
