@@ -14,7 +14,7 @@ In this project:
     - https://visualstudio.microsoft.com/downloads (community edition is fine)
     - https://www.python.org/downloads **(must use Python 3!)**
 
-2. Open a cmd.exe window and run the follow commands:
+2. Open a CMD Window and run the following commands:
   ``` bat
   git clone https://github.com/samsface/godot-native-example.git
   cd godot-native-example
