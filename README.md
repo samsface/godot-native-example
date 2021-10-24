@@ -11,9 +11,11 @@ In this project:
 1. Download and install:
     - https://git-scm.com/download/win
     - https://cmake.org/download
-        - When prompted by installer, add CMake to the Path.
+        - When prompted by installer, add CMake to the system path.
     - https://visualstudio.microsoft.com/downloads (community edition is fine)
+        - When prompted by installer, use 'Desktop Development with C++".
     - https://www.python.org/downloads **(must use Python 3!)**
+        - When prompted by installer, add Python to the system path.
 
 2. Open a CMD window and run the following commands:
   ``` bat
@@ -28,7 +30,7 @@ In this project:
 
 ## For all builds
 
-- You DO NOT need to copy and built files into the Godot project. CMake does this for you.
+- You DO NOT need to copy the build files into the Godot project. CMake does this for you.
 - You DO NOT need to restart Godot every time you rebuild. Godot will reload the plugin.
 
 ## Using the CI:
