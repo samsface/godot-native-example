@@ -32,6 +32,7 @@ In this project:
 
 - You DO NOT need to copy the build files into the Godot project. CMake does this for you.
 - You DO NOT need to restart Godot every time you rebuild. Godot will reload the plugin.
+- On Windows, you need to stop debugging in Godot to rebuild, else you'll get a permission denied error installing the dll.
 
 ## Using the CI:
 
