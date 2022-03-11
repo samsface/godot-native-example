@@ -30,13 +30,19 @@ In this project:
 
 ## Building on Linux 🐧
 
+1. Install tooling:
 ```sh
 sudo apt-get update && apt-get install build-essential cmake python3-pip
+```
 
+2. Clone the project and build
+```sh
 git clone https://github.com/samsface/godot-native-example.git
 cd godot-native-example
 sh debug.sh
 ```
+
+3. Run the godot project in the app directory of this repo. If it prints "ciao" to the output, it worked!
 
 ## FAQ
 
