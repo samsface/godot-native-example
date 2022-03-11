@@ -6,7 +6,7 @@ In this project:
 - **Support for 💰Windows, 🐧Linux & 🍏MacOS (x86_x64/arm64).**
 - **🤖 An automated build pipeline to build for all above platforms.**
 
-## Buildling on Windows
+## Buildling on Windows 💰
 
 1. Download and install:
     - https://git-scm.com/download/win
@@ -28,16 +28,14 @@ In this project:
 
 4. Run the godot project in the app directory of this repo. If it prints "ciao" to the output, it worked!
 
-## Building on Linux
+## Building on Linux 🐧
 
-1. Install tooling:
 ```sh
 sudo apt-get update && apt-get install build-essential cmake python3-pip
-pip3 install conan
-```
 
-2. Build and copy plugin into example dir
-```sh
+git clone https://github.com/samsface/godot-native-example.git
+cd godot-native-example
+pip3 install conan
 sh debug.sh
 ```
 
