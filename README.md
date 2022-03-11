@@ -35,7 +35,6 @@ sudo apt-get update && apt-get install build-essential cmake python3-pip
 
 git clone https://github.com/samsface/godot-native-example.git
 cd godot-native-example
-pip3 install conan
 sh debug.sh
 ```
 
