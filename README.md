@@ -28,7 +28,7 @@ In this project:
 
 4. Run the godot project in the app directory of this repo. If it prints "ciao" to the output, it worked!
 
-## For all builds
+## FAQ
 
 - You DO NOT need to copy the build files into the Godot project. CMake does this for you.
 - You DO NOT need to restart Godot every time you rebuild. Godot will reload the plugin.
