@@ -581,6 +581,7 @@ public:
         }
     }
 
+
     bool copy_cover(godot::String src_path, godot::String dst_path, unsigned int cover_idx = 0) {
         //TagLib::ByteVector tag_data;
         //Converts Hex Encoded Data
