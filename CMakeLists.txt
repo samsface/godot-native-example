@@ -27,7 +27,7 @@ endif()
 
 include(${CMAKE_BINARY_DIR}/conan.cmake)
  
-conan_cmake_configure(REQUIRES godot-cpp/3.5@local/stable taglib/1.13 GENERATORS cmake_find_package)
+conan_cmake_configure(REQUIRES godot-cpp/3.3@local/stable taglib/1.13 GENERATORS cmake_find_package)
 
 conan_cmake_autodetect(settings)
 
