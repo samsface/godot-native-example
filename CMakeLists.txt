@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
-project(gdnative-example)
+cmake_minimum_required(VERSION 3.2)
+project(Veles)
 
 ###############################################################################
 # options
@@ -26,21 +26,22 @@ if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
 endif()
 
 include(${CMAKE_BINARY_DIR}/conan.cmake)
-
-conan_cmake_configure(REQUIRES godot-cpp/3.3@local/stable GENERATORS cmake_find_package)
+ 
+conan_cmake_configure(REQUIRES godot-cpp/3.5@local/stable taglib/1.13 GENERATORS cmake_find_package)
 
 conan_cmake_autodetect(settings)
 
 conan_cmake_install(PATH_OR_REFERENCE . BUILD missing SETTINGS ${settings})
 
 find_package(godot-cpp)
+find_package(taglib REQUIRED)
 
 ###############################################################################
 
 # install build into example project by default
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set(
-    CMAKE_INSTALL_PREFIX "../app/addons/example" 
+    CMAKE_INSTALL_PREFIX "../app/addons/GDNative" 
     CACHE PATH "..." 
     FORCE)
 endif()
@@ -48,24 +49,25 @@ endif()
 # let's us link relative to process on linux
 set(CMAKE_INSTALL_RPATH "$ORIGIN")
 
-add_library(gdnative-example src/Godot.cpp)
+add_library(Veles src/Godot.cpp)
 
 target_link_libraries(
-  gdnative-example
+  Veles
   PRIVATE
-    godot-cpp::godot-cpp)
+    godot-cpp::godot-cpp
+    taglib::taglib)
 
 set_target_properties(
-  gdnative-example
+  Veles
   PROPERTIES
   CXX_STANDARD 17
   CXX_STANDARD_REQUIRED ON)
 
 if(APPLE)
   set_target_properties(
-    gdnative-example
+    Veles
     PROPERTIES 
     OSX_ARCHITECTURES "arm64;x86_64")
 endif()
 
-install(TARGETS gdnative-example DESTINATION .)
+install(TARGETS Veles DESTINATION .)
